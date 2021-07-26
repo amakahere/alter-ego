@@ -1,0 +1,22 @@
+//colors
+$black: #1b1b1b;
+$white: #fbfbfb;
+$grey: #e0e2e3;
+$accent-1: #f5a4bd;
+$accent-2: #8ab7f3;
+
+.shop {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: em(10);
+	grid-row-gap: em(10);
+}
+
+.sale {
+	background-color: $accent-1;
+	color: $white;
+	position: absolute;
+	padding: 2px 5px;
+	top: 0;
+	left: 0;
+}

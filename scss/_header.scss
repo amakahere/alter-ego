@@ -1,0 +1,110 @@
+.newsletter {
+	background-color: $accent-2;
+	text-align: center;
+	padding: 10px 0;
+	font-size: rem(16);
+
+	@include resize("medium") {
+		font-size: rem(14);
+	}
+}
+
+.newsletter a {
+	color: $black;
+}
+
+header {
+	background-color: $white;
+	width: 100%;
+}
+
+header h1 {
+	text-align: center;
+}
+
+header a {
+	text-decoration: none;
+	color: $black;
+}
+
+.head {
+	width: 100%;
+	padding: 24px 40px;
+	position: relative;
+
+	@include resize("medium") {
+		padding: 24px 16px;
+	}
+}
+
+.head img {
+	width: 32px;
+	height: 32px;
+}
+
+.menu {
+	position: absolute;
+	top: 40%;
+	left: 5%;
+	cursor: pointer;
+}
+
+.cart {
+	position: absolute;
+	top: 40%;
+	right: 5%;
+}
+
+.menu div {
+	background-color: $black;
+	width: 32px;
+	height: 5px;
+	margin-bottom: 8px;
+}
+
+.nav-menu {
+	background-color: $black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: em(300);
+	height: 100vh;
+	color: $white;
+	z-index: 2;
+
+	padding: em(68) em(40) em(40);
+	transform: translate(-100%, 0);
+	transition: all 300ms ease-in-out;
+
+	@include resize("medium") {
+		width: 100%;
+	}
+}
+
+.nav-menu.menu-toggle {
+	transform: translate(0, 0);
+}
+
+.nav-menu a {
+	color: $white;
+	text-decoration: none;
+	font-size: rem(40);
+}
+
+.nav-menu a:hover {
+	color: $accent-2;
+}
+
+.nav-menu a.active {
+	color: $accent-2;
+}
+
+.nav-menu nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.close {
+	cursor: pointer;
+	margin-bottom: rem(16);
+}

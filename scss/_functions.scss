@@ -1,0 +1,27 @@
+//em & rem to px
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+//breakpoints
+$breakpoints: (
+	"medium": 40em,
+	"large": 64em,
+	"xlarge": 87.5em,
+) !default;
+
+@mixin resize($breakpoint) {
+	// If the key exists in the map
+	@if map-has-key($breakpoints, $breakpoint) {
+		// Prints a media query based on the value
+		@media (max-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+}
